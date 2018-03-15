@@ -623,7 +623,7 @@ body  {
 }
 
 .services-notebooks {
-  margin-bottom: 80px;
+  margin-bottom: 95px;
   background: linear-gradient(to bottom, #ffffff 103px, #e5e5e5 103px, #e5e5e5 100%);
 }
 
@@ -654,8 +654,7 @@ body  {
   position: relative;
   width: 160px;
   margin-bottom: 25px;
-  padding: 8px 0px;
-  text-align: center;
+  padding: 8px 20px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -677,8 +676,9 @@ body  {
 .notebook-controls-item:active::after {    /*сомнительный ход*/
   position: absolute;
   content: "";
-  width: 150px;
-  height: 23px;
+  width: 120px;
+  height: 40px;
+  top: 0;
   left: 160px;
   background: #000000;
 }
@@ -691,10 +691,44 @@ body  {
 
 #notebook-1:checked ~ .wrapper .servises-container .notebook-controls .notebook-controls-item:first-child::before {
   position: absolute;
-  content: "";
-  width: 100px;
-  height: 600px;
-  background-color: red;
+  top: 0;
+  left: 0;
+  content: "Доставка";
+  box-sizing: border-box;
+  width: 284px;
+  height: 40px;
+  padding: 8px 20px;
+  font: inherit;
+  color: #f7e184;
+  background-color: #000000;
+}
+
+#notebook-2:checked ~ .wrapper .servises-container .notebook-controls .notebook-controls-item:nth-child(2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Гарантия";
+  box-sizing: border-box;
+  width: 284px;
+  height: 40px;
+  padding: 8px 20px;
+  font: inherit;
+  color: #f7e184;
+  background-color: #000000;
+}
+
+#notebook-3:checked ~ .wrapper .servises-container .notebook-controls .notebook-controls-item:last-child::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Кредит";
+  box-sizing: border-box;
+  width: 284px;
+  height: 40px;
+  padding: 8px 20px;
+  font: inherit;
+  color: #f7e184;
+  background-color: #000000;
 }
 
 .notebook-controls label {
@@ -765,8 +799,9 @@ body  {
 
 .manufacturers-list {
   display: flex;
+  justify-content: space-between;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 82px;
   padding: 0;
   list-style: none;
 }
@@ -784,12 +819,12 @@ body  {
 .information-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 85px;
 }
 
 .information-container h2 {
   margin: 0;
-  padding: 50px 0;
+  padding: 50px 0px 47px 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -797,9 +832,13 @@ body  {
   letter-spacing: 0.01em;
 }
 
+.information-container p {
+  margin: 0;
+}
+
 .about-us {
   position: relative;
-  width: 460px;
+  width: 500px;
 }
 
 .about-us::before {
@@ -808,6 +847,42 @@ body  {
   width: 80px;
   height: 7px;
   background-color: #000000;
+}
+
+.about-us p {
+  margin-bottom: 30px;
+}
+
+.our-partner {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 35px;
+  list-style: none;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: normal;
+}
+
+.our-partner li {
+  position: relative;
+}
+
+.our-partner li::before {
+  position: absolute;
+  left: -35px;
+  top: 15px;
+  content: "";
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.button-about-us {
+  padding: 8px 20px;
 }
 
 .contacts {
@@ -822,12 +897,16 @@ body  {
   background-color: #000000;
 }
 
-.our-partner {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 40px;
-  font-weight: 800;
-  letter-spacing: normal;
+.contacts p {
+  margin-bottom: 38px;
+}
+
+.contacts img {
+  margin-bottom: 65px;
+}
+
+.button-contacts {
+  padding: 8px 40px;
 }
 
 .main-footer {
@@ -839,16 +918,16 @@ body  {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 55px;
-  padding-bottom: 80px;
+  padding-top: 65px;
+  padding-bottom: 60px;
 }
 
 .main-footer .wrapper::before {
   position: absolute;
   content: "";
-  width: 80px;
+  width: 81px;
   height: 7px;
-  bottom: 73px;
+  bottom: 86px;
   background-color: #ffc600;
 
 }
@@ -863,12 +942,20 @@ body  {
   justify-content: space-between;
 }
 
+.footer-logo {
+  margin-bottom: 5px;
+}
+
 .footer-logo:hover {
   opacity: 0.6;
 }
 
 .footer-logo:active {
   opacity: 0.3;
+}
+
+.footer-user-section {
+  display: flex;
 }
 
 .footer-user-section a {
@@ -886,11 +973,16 @@ body  {
 
 .login-link-footer {
   position: relative;
+  width: 120px;
+  box-sizing: border-box;
+  padding-left: 60px;
 }
 
 .login-link-footer::before {
   position: absolute;
   content: "";
+  top: 10px;
+  left: 30px;
   width: 13px;
   height: 12px;
   background-color: transparent;
@@ -900,11 +992,15 @@ body  {
 
 .cart-link-footer {
   position: relative;
+  width: 120px;
+  text-align: right;
 }
 
 .cart-link-footer::before {
   position: absolute;
   content: "";
+  top: 10px;
+  left: 35px;
   width: 13px;
   height: 12px;
   background-color: transparent;
@@ -914,11 +1010,16 @@ body  {
 
 .comparison-link-footer {
   position: relative;
+  box-sizing: border-box;
+  width: 120px;
+  padding-left: 50px;
 }
 
 .comparison-link-footer::before {
   position: absolute;
   content: "";
+  top: 10px;
+  left: 25px;
   width: 13px;
   height: 12px;
   background-color: transparent;
@@ -926,16 +1027,29 @@ body  {
   background-repeat: no-repeat;
 }
 
+.footer-paragraph {
+  width: 300px;
+  margin-bottom: 65px;
+}
+
+.footer-paragraph:last-child {
+  text-align: right;
+}
+
 .footer-site-navigation {
   display: flex;
   justify-content: space-between;
   width: 440px;
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  margin-top: 20px;
+  padding: 0 5px;
   list-style: none;
 }
 
 .footer-site-navigation a {
+  display: inline-block;
+  margin-right: 40px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -955,8 +1069,28 @@ body  {
 .footer-social {
   display: flex;
   margin: 0;
+  margin-left: 510px;
   padding: 0;
   list-style: none;
+}
+
+.footer-social path,
+.footer-social rect {
+  fill: #7e7e7e;
+}
+
+.footer-social a:hover path,
+.footer-social a:hover rect {
+  fill: #ffffff;
+}
+
+.footer-social a:active path,
+.footer-social a:active rect  {
+  fill: #595959;
+}
+
+.footer-social li {
+  margin-right: 22px;
 }
 
 .academy-logo:hover img {
@@ -967,12 +1101,56 @@ body  {
   opacity: 0.3;
 }
 
+.modal-feedback {
+  box-sizing: border-box;
+  width: 960px;
+  padding: 80px 100px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feedback-form p:first-child,
+.feedback-form p:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.feedback-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .feedback-form label {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
   letter-spacing: 0.2em;
+}
+
+.button-feedback {
+  border: none;
+}
+
+.modal-feedback-close,
+.modal-map-close {
+  width: 55px;
+  height: 55px;
+  background-color: #f7e296;
+  border: none;
+  border-radius: 50%;
+}
+
+.modal-map {
+  width: 960px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .catalog-page h1 {
