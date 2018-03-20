@@ -23,7 +23,7 @@
             <button class="button-form-search" type="submit">Найти</button>
           </form>
 
-          <a class="login-link" href="login.html">Валентин Петухов<span>Выйти</a>
+          <a class="login-link login-link-exit" href="login.html">Валентин Петухов<span>Выйти</span></a>
 
           <a class="comparison-link" href="comparison.html">Сравнить</a>
 
@@ -33,7 +33,7 @@
 
         <ul class="site-navigation">
           <li class="site-navigation-item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="catalog-link-hover" href="catalog.html">Каталог товаров</a>
             <div class="catalog-navigation-container">
               <ul class="catalog-navigation">
                 <li class="catalog-navigation-item"><a href="#">Виртуальная реальность</a></li>
@@ -63,8 +63,10 @@
         <li><a href="catalog-list.html">Каталог товаров</a></li>
         <li><a class="breadcrumbs-current">Моноподы для селфи</a></li>
       </ul>
+    </div>
 
-      <div class="inner-container">
+    <div class="inner-container">
+      <div class="inner-container-wrapper">
         <div class="filter-container">
           <section class="filter">
             <h2>Фильтр:</h2>
@@ -80,8 +82,8 @@
                     <div class="toggle toggle-max"></div>
                   </div>
                   <div class="price-controls">
-                    <label class="min-price">от 0<input name="min-price" type="text" value=""></label>
-                    <label class="max-price">до 5000<input name="max-price" type="text" value=""></label>
+                    <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                    <label class="max-price">до <input name="max-price" type="text" value="5000"></label>
                   </div>
                 </div>
               </fieldset>
@@ -89,23 +91,23 @@
                 <legend class="form-legend">Цвет</legend>
                 <ul class="filter-list-color">
                   <li class="filter-option">
-                    <input class="filter-input filter-input-checkbox" id="filter-black" type="checkbox" name="black" checked>
+                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-black" type="checkbox" name="black" checked>
                     <label for="filter-black" tabindex="0">Черный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-input filter-input-checkbox" id="filter-white" type="checkbox" name="white">
+                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-white" type="checkbox" name="white">
                     <label for="filter-white" tabindex="0">Белый</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-input filter-input-checkbox" id="filter-blue" type="checkbox" name="blue" checked>
+                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-blue" type="checkbox" name="blue" checked>
                     <label for="filter-blue" tabindex="0">Синий</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-input filter-input-checkbox" id="filter-red" type="checkbox" name="red" checked>
+                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-red" type="checkbox" name="red" checked>
                     <label for="filter-red" tabindex="0">Красный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-input filter-input-checkbox" id="filter-pink" type="checkbox" name="pink">
+                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-pink" type="checkbox" name="pink">
                     <label for="filter-pink" tabindex="0">Розовый</label>
                   </li>
                 </ul>
@@ -114,11 +116,11 @@
                 <legend class="form-legend">Bluetooth</legend>
                 <ul class="filter-list-bluetooth">
                   <li class="filter-option">
-                    <input class="filter-input filter-input-radio" id="bluetooth" type="radio" name="bluetooth" value="Есть bluetooth" checked>
+                    <input class="visually-hidden filter-input filter-input-radio" id="bluetooth" type="radio" name="bluetooth" value="Есть bluetooth" checked>
                     <label for="bluetooth" tabindex="0">Есть</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-input filter-input-radio" id="no-bluetooth" type="radio" name="bluetooth" value="Нет bluetooth">
+                    <input class="visually-hidden filter-input filter-input-radio" id="no-bluetooth" type="radio" name="bluetooth" value="Нет bluetooth">
                     <label for="no-bluetooth" tabindex="0">Нет</label>
                   </li>
                 </ul>
@@ -133,7 +135,7 @@
             <h2 class="sort-title">Сортировка:</h2>
             <ul class="sort-list">
               <li>
-                <a class="sort-item active" href="#">По цене</a>
+                <a class="sort-item active">По цене</a>
               </li>
               <li>
                 <a class="sort-item" href="#">По типу</a>
@@ -142,12 +144,22 @@
                 <a class="sort-item" href="#">По популярности</a>
               </li>
             </ul>
-            <a class="sort-button-up" href="#">
-          <span class="visually-hidden">Сортировка по возрастанию</span>
-        </a>
-            <a class="sort-button-down sort-button-active" href="#">
-          <span class="visually-hidden">Сортировка по убыванию</span>
-        </a>
+            <div class="sort-buttons-container">
+              <a class="sort-button-up" href="#">
+              <span class="visually-hidden">Сортировка по возрастанию</span>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	             width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+              <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+              </svg>
+            </a>
+              <a class="sort-button-down sort-button-active" href="#">
+              <span class="visually-hidden">Сортировка по убыванию</span>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	            width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+              <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+              </svg>
+            </a>
+            </div>
           </section>
 
           <section class="product">
@@ -156,12 +168,12 @@
 
               <li class="product-item">
                 <a href="#">
-              <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              <div class="item-container">
-                <h3 class="product-item-title">Любительская селфи-палка</h3>
-                <p>500 руб.</p>
-              </div>
-            </a>
+                 <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                 <div class="item-container">
+                   <h3 class="product-item-title">Любительская селфи-палка</h3>
+                   <p>500 руб.</p>
+                 </div>
+                </a>
                 <div class="hover-container">
                   <a class="button button-hover-cart" href="#">В корзину</a>
                   <a class="button-hover-compare" href="#">Добавить к сравнению</a>
@@ -178,7 +190,7 @@
             </a>
                 <div class="hover-container">
                   <a class="button button-hover-cart" href="#">В корзину</a>
-                  <a class="button button-hover-compare" href="#">Добавить к сравнению</a>
+                  <a class="button-hover-compare" href="#">Добавить к сравнению</a>
                 </div>
               </li>
 
@@ -192,7 +204,7 @@
             </a>
                 <div class="hover-container">
                   <a class="button button-hover-cart" href="#">В корзину</a>
-                  <a class="button button-hover-compare" href="#">Добавить к сравнению</a>
+                  <a class="button-hover-compare" href="#">Добавить к сравнению</a>
                 </div>
               </li>
 
@@ -207,7 +219,7 @@
             </a>
                 <div class="hover-container">
                   <a class="button button-hover-cart" href="#">В корзину</a>
-                  <a class="button button-hover-compare" href="#">Добавить к сравнению</a>
+                  <a class="button-hover-compare" href="#">Добавить к сравнению</a>
                 </div>
               </li>
 
@@ -226,7 +238,6 @@
 
         </div>
       </div>
-    </div>
   </main>
 
   <footer class="main-footer">
@@ -236,7 +247,7 @@
       <img src="img/logo-footer.png" width="165" height="35" alt="Логотип Device">
     </a>
         <div class="footer-user-section">
-          <a class="login-link-footer" href="login.html">Валентин Петухов<span>Выйти</span></a>
+          <a class="login-link-footer login-link-footer-exit" href="login.html">Валентин Петухов<span>Выйти</span></a>
 
           <a class="comparison-link-footer" href="comparison.html">Сравнить</a>
 
