@@ -1,15 +1,15 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/gilroyextrabold.woff2") format("woff2"),
-       url("fonts/gilroyextrabold.woff") format("woff");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/gilroylight.woff2") format("woff2"),
-       url("fonts/gilroylight.woff") format("woff");
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -271,8 +271,8 @@ body  {
 }
 
 .site-navigation-item {
-  width: 120px;
-  margin-right: 40px;
+  /*width: 120px;*/
+  margin-right: 38px;
 }
 
 .site-navigation-item:first-child {
@@ -285,7 +285,7 @@ body  {
   position: absolute;
   content: "";
   left: 230px;
-  top: 15px;
+  top: 14px;
   width: 16px;
   height: 2px;
   background-color: #b8a974;
@@ -295,7 +295,7 @@ body  {
   position: absolute;
   content: "";
   left: 237px;
-  top: 8px;
+  top: 7px;
   width: 2px;
   height: 16px;
   background-color: #b8a974;
@@ -377,8 +377,13 @@ body  {
   text-decoration: none;
 }
 
+.catalog-navigation a:not([href]) {
+  opacity: 0.3;
+}
+
 .main-slider {
   position: relative;
+  min-height: 487px;
   top: -110px;
   background-color: transparent;
   z-index: 2;
@@ -716,6 +721,7 @@ body  {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background: linear-gradient(to bottom, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
+  background: -moz-linear-gradient(to bottom, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 62%, transparent 100%);
 }
 
 .notebook-controls-item:hover {
@@ -797,6 +803,7 @@ body  {
   margin: 0;
   padding: 75px 300px 130px 40px;
   list-style: none;
+  background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5 100%);
 }
 
 .service-item {
@@ -977,6 +984,7 @@ body  {
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #464646;
 }
 
 .main-footer .wrapper::before {
@@ -1057,7 +1065,9 @@ body  {
 
 .cart-link-footer {
   position: relative;
+  box-sizing: border-box;
   width: 120px;
+  padding-left: 60px;
   text-align: right;
 }
 
@@ -1094,6 +1104,7 @@ body  {
 
 .footer-paragraph {
   width: 300px;
+  box-sizing: border-box;
   margin-bottom: 60px;
   line-height: 40px;
   vertical-align: bottom;
@@ -1101,6 +1112,7 @@ body  {
 
 .footer-paragraph:last-child {
   text-align: right;
+  padding-left: 100px;   /* от переполнения */
 }
 
 .footer-site-navigation {
@@ -1318,7 +1330,11 @@ body  {
 
 .catalog-page {
   margin-top: -112px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+}
+
+.catalog-page .wrapper {
+  background-color: #ffffff;
 }
 
 .catalog-page h1 {
@@ -1779,7 +1795,7 @@ body  {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21px 32px;
+  /*padding: 21px 32px;*/
   margin-top: -7px;
   background-color: #ebebeb;
 }
@@ -1794,7 +1810,6 @@ body  {
 
 .pagination-item {
   padding: 0 15px;
-  outline: 2px solid red;
 }
 
 .pagination a {
@@ -1822,6 +1837,8 @@ body  {
 
 .pagination .pagination-item-back,
 .pagination .pagination-item-forward {
+  display: inline-block;
+  padding: 25px 32px;
   opacity: 1;
   text-transform: uppercase;
 }
